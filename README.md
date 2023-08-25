@@ -18,5 +18,18 @@ Note:
 - To check for the version number, run this command: `todo -V` or `todo --version`.
 - For help, run this command: `todo -h` or `todo --help`.
 
-## How to use the tool - GIFS
-(I'll add in some time...)
+## How to use the tool - Video Tutorials
+
+### Add Tasks
+https://github.com/KrishJ4856/task-manager-cli-fcc/assets/114345816/6239511b-3012-4f44-87ed-da78a4630111
+
+### Read Tasks
+https://github.com/KrishJ4856/task-manager-cli-fcc/assets/114345816/bdb035ff-339e-4371-8eab-6754b1404015
+
+### Update Tasks
+https://github.com/KrishJ4856/task-manager-cli-fcc/assets/114345816/40846098-fd0f-4b83-8d95-ee32d7db76ee
+
+### Delete Tasks
+https://github.com/KrishJ4856/task-manager-cli-fcc/assets/114345816/3b745d2c-2dda-483e-a946-6b7d80e1f25d
+
+> **Note:** Both update and delete operations require you to enter the **Todo code** of the task you want to update or delete.
