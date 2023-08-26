@@ -5,7 +5,7 @@ import {connectDB, disconnectDB} from '../db/connectDB.js'
 import ora from "ora";
 import chalk from "chalk";
 
-export default async function deleteTask(){
+export async function getTaskCode(){
     try {
         // Prompting the user to enter the todo code
         const answers = await inquirer.prompt([
@@ -15,6 +15,17 @@ export default async function deleteTask(){
         // Trimming user's response so that the todo code does not contain any starting or trailing white spaces
         answers.code = answers.code.trim()
 
+        return answers
+    } catch (error) {
+        console.log('Something went wrong...\n', error)
+    }
+}
+
+export default async function deleteTask(){
+    try {
+        // Obtaining the todo code provided by user
+        const userCode = await getTaskCode()
+
         // Connecting to the database
         await connectDB()
 
@@ -22,7 +33,7 @@ export default async function deleteTask(){
         const spinner = ora('Finding and Deleting the todo...').start()
 
         // Deleting the task
-        const response = await Todos.deleteOne({code: answers.code})
+        const response = await Todos.deleteOne({code: userCode.code})
 
         // Stopping the spinner
         spinner.stop()
